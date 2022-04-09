@@ -26,6 +26,7 @@
 
 <body class="az-body">
 
+    @if(!isset($auth))
     <div class="az-header shadow-none">
         <div class="container-fluid">
             <div class="az-header-left">
@@ -196,6 +197,7 @@
         </div><!-- container-fluid -->
     </div><!-- az-navbar -->
 
+    @endif
     <div class="az-content az-content-dashboard-four">
         <div class="media media-dashboard">
             @yield('content')
