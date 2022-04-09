@@ -20,8 +20,8 @@
     <!-- azia CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/azia.css') }}">
     <!-- Datatable -->
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net-dt/css/jquery.dataTables.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css') }}">
+
+
 </head>
 
 <body class="az-body">
@@ -221,10 +221,6 @@
     <script src="{{ asset('assets/js/azia.js') }}"></script>
     <script src="{{ asset('assets/js/chart.flot.sampledata.js') }}"></script>
     <!-- Datatables -->
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net/js/jquery.dataTables.min.js') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js') }}">
-    <link rel="stylesheet" href="{{ asset('assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js') }}">
 
     <script>
         $(function() {
