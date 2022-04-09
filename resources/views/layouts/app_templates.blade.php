@@ -155,78 +155,19 @@
                         <li class="nav-sub-item"><a href="landing-sass.html" class="nav-sub-link">Landing Page</a></li>
                     </ul>
                 </li><!-- nav-item -->
-                <li class="nav-item nav-item-mega">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Components</a>
-                    <div class="nav-sub nav-sub-mega">
-                        <div class="container-fluid">
-                            <div>
-                                <ul class="nav">
-                                    <li><span>UI Elements</span></li>
-                                    <li class="nav-sub-item"><a href="elem-accordion.html" class="nav-sub-link active">Accordion</a></li>
-                                    <li class="nav-sub-item"><a href="elem-alerts.html" class="nav-sub-link">Alerts</a></li>
-                                    <li class="nav-sub-item"><a href="elem-avatar.html" class="nav-sub-link">Avatar</a></li>
-                                    <li class="nav-sub-item"><a href="elem-badge.html" class="nav-sub-link">Badge</a></li>
-                                    <li class="nav-sub-item"><a href="elem-breadcrumbs.html" class="nav-sub-link">Breadcrumbs</a></li>
-                                    <li class="nav-sub-item"><a href="elem-buttons.html" class="nav-sub-link">Buttons</a></li>
-                                    <li class="nav-sub-item"><a href="elem-cards.html" class="nav-sub-link">Cards</a></li>
-                                    <li class="nav-sub-item"><a href="elem-carousel.html" class="nav-sub-link">Carousel</a></li>
-                                </ul>
-                                <ul class="nav">
-                                    <li class="nav-sub-item"><a href="elem-collapse.html" class="nav-sub-link">Collapse</a></li>
-                                    <li class="nav-sub-item"><a href="elem-dropdown.html" class="nav-sub-link">Dropdown</a></li>
-                                    <li class="nav-sub-item"><a href="elem-icons.html" class="nav-sub-link">Icons</a></li>
-                                    <li class="nav-sub-item"><a href="elem-images.html" class="nav-sub-link">Images</a></li>
-                                    <li class="nav-sub-item"><a href="elem-list-group.html" class="nav-sub-link">List Group</a></li>
-                                    <li class="nav-sub-item"><a href="elem-media-object.html" class="nav-sub-link">Media Object</a></li>
-                                    <li class="nav-sub-item"><a href="elem-modals.html" class="nav-sub-link">Modals</a></li>
-                                    <li class="nav-sub-item"><a href="elem-navigation.html" class="nav-sub-link">Navigation</a></li>
-                                </ul>
-                                <ul class="nav">
-                                    <li class="nav-sub-item"><a href="elem-pagination.html" class="nav-sub-link">Pagination</a></li>
-                                    <li class="nav-sub-item"><a href="elem-popover.html" class="nav-sub-link">Popover</a></li>
-                                    <li class="nav-sub-item"><a href="elem-progress.html" class="nav-sub-link">Progress</a></li>
-                                    <li class="nav-sub-item"><a href="elem-spinners.html" class="nav-sub-link">Spinners</a></li>
-                                    <li class="nav-sub-item"><a href="elem-toast.html" class="nav-sub-link">Toast</a></li>
-                                    <li class="nav-sub-item"><a href="elem-tooltip.html" class="nav-sub-link">Tooltip</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="nav">
-                                    <li><span>Forms</span></li>
-                                    <li class="nav-sub-item"><a href="form-elements.html" class="nav-sub-link">Form Elements</a></li>
-                                    <li class="nav-sub-item"><a href="form-layouts.html" class="nav-sub-link">Form Layouts</a></li>
-                                    <li class="nav-sub-item"><a href="form-validation.html" class="nav-sub-link">Form Validation</a></li>
-                                    <li class="nav-sub-item"><a href="form-wizards.html" class="nav-sub-link">Form Wizards</a></li>
-                                    <li class="nav-sub-item"><a href="form-editor.html" class="nav-sub-link">WYSIWYG Editor</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="nav">
-                                    <li><span>Charts</span></li>
-                                    <li class="nav-sub-item"><a href="chart-morris.html" class="nav-sub-link">Morris Charts</a></li>
-                                    <li class="nav-sub-item"><a href="chart-flot.html" class="nav-sub-link">Flot Charts</a></li>
-                                    <li class="nav-sub-item"><a href="chart-chartjs.html" class="nav-sub-link">ChartJS</a></li>
-                                    <li class="nav-sub-item"><a href="chart-sparkline.html" class="nav-sub-link">Sparkline</a></li>
-                                    <li class="nav-sub-item"><a href="chart-peity.html" class="nav-sub-link">Peity</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <ul class="nav">
-                                    <li><span>Maps</span></li>
-                                    <li class="nav-sub-item"><a href="map-google.html" class="nav-sub-link">Google Maps</a></li>
-                                    <li class="nav-sub-item"><a href="map-leaflet.html" class="nav-sub-link">Leaflet</a></li>
-                                    <li class="nav-sub-item"><a href="map-vector.html" class="nav-sub-link">Vector Maps</a></li>
-                                    <li><span>Tables</span></li>
-                                    <li class="nav-sub-item"><a href="table-basic.html" class="nav-sub-link">Basic Tables</a></li>
-                                    <li class="nav-sub-item"><a href="table-data.html" class="nav-sub-link">Data Tables</a></li>
-
-                                </ul>
-                            </div>
-                        </div><!-- container -->
-                    </div><!-- nav-sub -->
+                <li class="nav-item">
+                    <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaksi</a>
+                    <ul class="nav-sub">
+                        <li class="nav-sub-item">
+                            <a href="app-mail.html" class="nav-sub-link">Pemasukan & Pengeluaran</a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a href="app-mail.html" class="nav-sub-link">Utang & Piutang</a>
+                        </li>
+                    </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Utilities</a>
+                    <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Stok Barang</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item"><a href="util-background.html" class="nav-sub-link">Background</a></li>
                         <li class="nav-sub-item"><a href="util-border.html" class="nav-sub-link">Border</a></li>
@@ -239,6 +180,13 @@
                         <li class="nav-sub-item"><a href="util-typography.html" class="nav-sub-link">Typography</a></li>
                         <li class="nav-sub-item"><a href="util-width.html" class="nav-sub-link">Width</a></li>
                         <li class="nav-sub-item"><a href="util-extras.html" class="nav-sub-link">Extras</a></li>
+                    </ul>
+                </li><!-- nav-item -->
+                <li class="nav-item">
+                    <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Laporan</a>
+                    <ul class="nav-sub">
+                        <li class="nav-sub-item"><a href="util-background.html" class="nav-sub-link">Statistik</a></li>
+                        <li class="nav-sub-item"><a href="util-border.html" class="nav-sub-link">Laporan</a></li>
                     </ul>
                 </li><!-- nav-item -->
             </ul><!-- nav -->
