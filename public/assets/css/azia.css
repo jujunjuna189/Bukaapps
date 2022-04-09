@@ -11555,7 +11555,7 @@ body {
   justify-content: center; }
 
 .az-card-signin {
-  height: 560px;
+  height: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -11568,7 +11568,7 @@ body {
       padding: 30px 35px; } }
 
 .az-signin-header h2 {
-  font-weight: 500;
+  font-weight: 300;
   color: #5b47fb;
   letter-spacing: -1px; }
 
