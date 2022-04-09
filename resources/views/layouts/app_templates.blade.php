@@ -156,7 +156,7 @@
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaksi</a>
+                    <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaction</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
                             <a href="app-mail.html" class="nav-sub-link">Pemasukan & Pengeluaran</a>
