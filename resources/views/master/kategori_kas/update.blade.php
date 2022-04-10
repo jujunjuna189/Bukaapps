@@ -10,11 +10,11 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('kategori_kas.add.proses') }}" method="post">
+            <form action="{{ route('kategori_kas.update.proses', ['id' => $kategori_kas->id]) }}" method="post">
                 @csrf
                 <div class="form-group">
                     <label>Kategori</label>
-                    <input type="text" class="form-control @error('kategori') is-invalid @enderror" placeholder="Masukkan Kategori" name="kategori" id="kategori" value="{{ old('kategori') }}">
+                    <input type="text" class="form-control @error('kategori') is-invalid @enderror" placeholder="Masukkan Kategori" name="kategori" id="kategori" value="{{ $kategori_kas->kategori }}">
                     @error('kategori')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -24,8 +24,13 @@
                 <div class="form-group">
                     <label>Status</label>
                     <select name="status" id="status" class="form-control">
+                        <option value="{{ $kategori_kas->status }}">{{ $kategori_kas->status }}</option>
+                        @if($kategori_kas->status == 'Active')
                         <option value="On-Going">On-Going</option>
+                        @endif
+                        @if($kategori_kas->status == 'On-Going')
                         <option value="Active">Active</option>
+                        @endif
                     </select>
                 </div>
                 <div class="form-group text-right">

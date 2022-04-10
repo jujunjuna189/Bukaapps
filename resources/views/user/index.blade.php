@@ -6,10 +6,14 @@
             <h6 class="az-content-title tx-18 mg-b-5">ADMIN</h6>
         </div>
         <div class="float-right text-right">
+<<<<<<< Updated upstream
             <a href="{{route('users.add')}}" class="btn btn-primary"><i class="typcn typcn-plus"></i> Tambah</a>
+=======
+            <a href="#" class="btn btn-primary"><i class="typcn typcn-plus"></i> Tambah</a>
+>>>>>>> Stashed changes
         </div>
     </div><!-- az-content-header -->
-    
+
     <div class="card">
         <div class="card-body">
             <div class="table-responsive">
