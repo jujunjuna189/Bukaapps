@@ -24,6 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/kategori_kas', [KategoriKasController::class, 'kategori_kas'])->name('kategori_kas');
+Route::get('/kategori_kas/add', [KategoriKasController::class, 'add'])->name('kategori_kas.add');
 // user
 Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/users/add', [UserController::class, 'add'])->name('users.add');
