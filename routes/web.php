@@ -28,3 +28,6 @@ Route::get('/kategori_kas/add', [KategoriKasController::class, 'add'])->name('ka
 // user
 Route::get('/users', [UserController::class, 'index'])->name('users');
 Route::get('/users/add', [UserController::class, 'add'])->name('users.add');
+Route::post('/users/proses', [UserController::class, 'add_proses'])->name('users.add.proses');
+Route::get('/users/update', [UserController::class, 'update'])->name('users.update');
+Route::post('/users/proses', [UserController::class, 'update_proses'])->name('users.update.proses');

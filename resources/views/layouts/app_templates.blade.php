@@ -148,7 +148,7 @@
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-group"></i>Pengguna</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item"><a href="{{route('users')}}" class="nav-sub-link">Admin</a></li>
-                        <li class="nav-sub-item"><a href="page-invoice.html" class="nav-sub-link">User</a></li>
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link">User</a></li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
