@@ -147,18 +147,8 @@
                 <li class="nav-item">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-group"></i>Pengguna</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="page-profile.html" class="nav-sub-link">Profile</a></li>
-                        <li class="nav-sub-item"><a href="page-invoice.html" class="nav-sub-link">Invoice</a></li>
-                        <li class="nav-sub-item"><a href="page-signin.html" class="nav-sub-link">Sign In</a></li>
-                        <li class="nav-sub-item"><a href="page-signup.html" class="nav-sub-link">Sign Up</a></li>
-                        <li class="nav-sub-item"><a href="page-404.html" class="nav-sub-link">Page 404</a></li>
-                        <li class="nav-sub-item"><a href="page-faq.html" class="nav-sub-link">Faq</a></li>
-                        <li class="nav-sub-item"><a href="page-news-grid.html" class="nav-sub-link">News Grid</a></li>
-                        <li class="nav-sub-item"><a href="page-product-catalogue.html" class="nav-sub-link">Product Catalogue</a></li>
-                        <li class="nav-sub-item"><a href="page-project-list.html" class="nav-sub-link">Project List</a></li>
-                        <li class="nav-sub-item"><a href="page-order.html" class="nav-sub-link">Orders</a></li>
-                        <li class="nav-sub-item"><a href="page-pricing.html" class="nav-sub-link">Pricing</a></li>
-                        <li class="nav-sub-item"><a href="landing-sass.html" class="nav-sub-link">Landing Page</a></li>
+                        <li class="nav-sub-item"><a href="page-profile.html" class="nav-sub-link">Admin</a></li>
+                        <li class="nav-sub-item"><a href="page-invoice.html" class="nav-sub-link">User</a></li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
