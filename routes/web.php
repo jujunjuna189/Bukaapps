@@ -26,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/kategori_kas', [KategoriKasController::class, 'kategori_kas'])->name('kategori_kas');
 // user
 Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/users/add', [UserController::class, 'add'])->name('users.add');
