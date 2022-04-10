@@ -37,12 +37,23 @@ class UserController extends Controller
     }
 
     public function update_proses(Request $request){
+        $id = $request->id;
         $obj['name'] = $request->name;
         $obj['email'] = $request->email;
         $obj['password'] = Hash::make($request->password);
 
-        User::update($obj);
+
+        $user = User::find($id);
+        $user->update($obj);
 
         return redirect()->route('users')->with('success', 'Berhasil update pengguna');
+    }
+
+    public function delete(Request $request){
+        $id = $request->id;
+        $user = User::find($id);
+        $user->delete();
+
+        return redirect()->route('users')->with('success', 'Berhasil hapus pengguna');
     }
 }

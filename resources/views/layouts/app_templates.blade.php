@@ -155,7 +155,7 @@
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaksi</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
-                            <a href="app-mail.html" class="nav-sub-link">Pemasukan & Pengeluaran</a>
+                            <a href="{{route('transaksi.pemasukan')}}" class="nav-sub-link">Pemasukan & Pengeluaran</a>
                         </li>
                         <li class="nav-sub-item">
                             <a href="app-mail.html" class="nav-sub-link">Utang & Piutang</a>

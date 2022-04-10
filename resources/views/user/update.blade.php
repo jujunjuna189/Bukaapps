@@ -10,7 +10,7 @@
     
     <div class="card">
         <div class="card-body">
-            <form action="{{route('users.update.proses')}}" method="post">
+            <form action="{{route('users.update.proses', ['id' => $user->id])}}" method="post">
                 @csrf
                 <div class="form-group">
                     <label>Nama Lengkap</label>

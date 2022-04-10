@@ -30,7 +30,7 @@
                             <td>{{ $val->email }}</td>
                             <td>
                                 <a href="{{route('users.update',['id'=>$val->id])}}" class="badge badge-warning p-2"><i class="typcn typcn-edit"></i> Edit</a>
-                                <a href="#" class="badge badge-danger p-2"><i class="typcn typcn-trash"></i> Hapus</a>
+                                <a href="{{route('users.delete',['id'=>$val->id])}}" class="badge badge-danger p-2"><i class="typcn typcn-trash"></i> Hapus</a>
                             </td>
                         </tr>
                         @endforeach
