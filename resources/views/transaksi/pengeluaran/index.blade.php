@@ -1,19 +1,17 @@
 @extends('layouts.app_templates')
 @section('content')
 <div class="media-body">
-    <div class="az-content-header">
-        <div>
+    <div class="az-content-header row">
+        <div class="col-lg-6">
             <h6 class="az-content-title tx-18 mg-b-5">Pengeluaran</h6>
-            <p class="az-content-text tx-13 mg-b-0">Hi, welcome back! Here's your summary of your events.</p>
+            <p class="az-content-text tx-13 mg-b-0 mb-lg-0 mb-3">Hi, welcome back! Here's your summary of your events.</p>
         </div>
-        <div class="float-right text-right">
-            <div class="row row-sm">
-                <div class="col-lg-4">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary pd-x-25">Pemasukan</button>
-                        <a href="{{route('transaksi.pengeluaran')}}" class="btn btn-secondary pd-x-25 active">Pengeluaran</a>
-                    </div>
-                </div><!-- col-4 -->
+        <div class="col-lg-6">
+            <div class="float-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="{{route('transaksi.pemasukan')}}" class="btn btn-outline-secondary pd-x-25">Pemasukan</a>
+                    <a href="{{route('transaksi.pengeluaran')}}" class="btn btn-secondary pd-x-25 active">Pengeluaran</a>
+                </div>
             </div>
         </div>
     </div><!-- az-content-header -->

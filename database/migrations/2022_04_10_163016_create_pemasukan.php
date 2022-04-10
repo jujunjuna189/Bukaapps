@@ -15,6 +15,7 @@ class CreatePemasukan extends Migration
     {
         Schema::create('pemasukan', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
             $table->string('title');
             $table->integer('total');
             $table->timestamps();

@@ -9,7 +9,7 @@
         <div class="col-lg-6">
             <div class="float-right">
                 <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary pd-x-25 active">Pemasukan</button>
+                    <a href="{{route('transaksi.pemasukan')}}" class="btn btn-secondary pd-x-25 active">Pemasukan</a>
                     <a href="{{route('transaksi.pengeluaran')}}" class="btn btn-outline-secondary pd-x-25">Pengeluaran</a>
                 </div>
             </div>
