@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Master\KategoriKasController;
 use App\Http\Controllers\Transaksi\PemasukanController;
+use App\Http\Controllers\Transaksi\PengeluaranController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -38,5 +39,7 @@ Route::post('/users/add/proses', [UserController::class, 'add_proses'])->name('u
 Route::get('/users/update', [UserController::class, 'update'])->name('users.update');
 Route::post('/users/update/proses', [UserController::class, 'update_proses'])->name('users.update.proses');
 Route::get('/users/delete', [UserController::class, 'delete'])->name('users.delete');
-// transaksi
+// transaksi pemasukan
 Route::get('/transaksi/pemasukan', [PemasukanController::class, 'index'])->name('transaksi.pemasukan');
+// transaksi pengeluaran
+Route::get('/transaksi/pengeluaran', [PengeluaranController::class, 'index'])->name('transaksi.pengeluaran');

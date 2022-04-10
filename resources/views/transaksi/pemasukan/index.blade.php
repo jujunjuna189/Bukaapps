@@ -11,7 +11,7 @@
                 <div class="col-lg-4">
                     <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-secondary pd-x-25 active">Pemasukan</button>
-                            <button type="button" class="btn btn-outline-secondary pd-x-25">Pengeluaran</button>
+                            <a href="{{route('transaksi.pengeluaran')}}" class="btn btn-outline-secondary pd-x-25">Pengeluaran</a>
                     </div>
                 </div><!-- col-4 -->
             </div>
