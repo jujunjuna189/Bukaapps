@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Master\KategoriKasController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/kategori_kas', [KategoriKasController::class, 'kategori_kas'])->name('kategori_kas');
+// user
+Route::get('/users', [UserController::class, 'index'])->name('users');
