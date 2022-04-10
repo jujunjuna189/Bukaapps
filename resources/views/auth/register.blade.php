@@ -80,8 +80,8 @@
         <div class="az-signup-header">
             <h1 class="mb-1 text-primary"><span class="text-capitalize">B</span>ukaapps</h1>
             <h6 class="mb-4 text-dark">Aplikasi buku uang kas</h6>
-
-          <form action="page-profile.html">
+          <form method="POST" action="{{ route('register') }}">
+              @csrf
             <div class="form-group">
               <label>Nama Lengkap</label>
               <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Masukkan nama lengkap" value="{{ old('name') }}">
@@ -95,7 +95,7 @@
             </div><!-- form-group -->
             <div class="form-group">
               <label>Username</label>
-              <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Masukkan email" value="{{ old('email') }}">
+              <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Masukkan username" value="{{ old('email') }}">
             
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -121,11 +121,11 @@
 
             </div><!-- form-group -->
 
-            <button class="btn btn-az-primary btn-block">Buat Akun</button>
+            <button class="btn btn-az-primary btn-block" type="submit">Buat Akun</button>
           </form>
         </div><!-- az-signup-header -->
         <div class="az-signup-footer">
-          <p>Sudah memiliki akun? <a href="page-signin.html">Masuk</a></p>
+          <p>Sudah memiliki akun? <a href="{{route('login')}}">Masuk</a></p>
         </div><!-- az-signin-footer -->
       </div><!-- az-column-signup -->
     </div><!-- az-signup-wrapper -->
