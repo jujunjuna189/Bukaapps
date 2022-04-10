@@ -243,9 +243,7 @@
                 "autoWidth": false,
                 "responsive": true,
             });
-        });
-
-        $(".dataTables_wrapper").css("width", "100%");
+        })
     </script>
 
 

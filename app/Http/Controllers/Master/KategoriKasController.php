@@ -10,6 +10,6 @@ class KategoriKasController extends Controller
     //
     public function kategori_kas()
     {
-        return view('master.kategori_kas');
+        return view('master.kategori_kas.kategori_kas');
     }
 }

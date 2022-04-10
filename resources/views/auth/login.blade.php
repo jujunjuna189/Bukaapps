@@ -53,7 +53,6 @@
             <div>
                 Tidak memiliki akun? <a href="{{ route('register') }}">Daftar</a>
             </div>
-
         </div><!-- az-signin-footer -->
     </div><!-- az-card-signin -->
 </div><!-- az-signin-wrapper -->
