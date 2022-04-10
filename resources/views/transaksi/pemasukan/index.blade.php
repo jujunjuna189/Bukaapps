@@ -10,8 +10,13 @@
             <div class="row row-sm">
                 <div class="col-lg-4">
                     <div class="btn-group" role="group" aria-label="Basic example">
+<<<<<<< Updated upstream
                             <button type="button" class="btn btn-secondary pd-x-25 active">Pemasukan</button>
                             <a href="{{route('transaksi.pengeluaran')}}" class="btn btn-outline-secondary pd-x-25">Pengeluaran</a>
+=======
+                        <button type="button" class="btn btn-secondary pd-x-25 active">Pemasukan</button>
+                        <button type="button" class="btn btn-outline-secondary pd-x-25">Pengeluaran</button>
+>>>>>>> Stashed changes
                     </div>
                 </div><!-- col-4 -->
             </div>
@@ -20,7 +25,14 @@
 
     <div class="card">
         <div class="card-body">
-            
+            <div class="row">
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+            </div>
         </div>
     </div>
 </div><!-- media-body -->
