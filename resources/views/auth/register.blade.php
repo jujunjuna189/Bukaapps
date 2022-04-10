@@ -77,33 +77,55 @@
 
 <div class="az-signup-wrapper justify-content-center">
       <div class="az-column-signup">
-        <h1 class="az-logo">az<span>i</span>a</h1>
         <div class="az-signup-header">
-          <h2>Get Started</h2>
-          <h4>It's free to signup and only takes a minute.</h4>
+            <h1 class="mb-1 text-primary"><span class="text-capitalize">B</span>ukaapps</h1>
+            <h6 class="mb-4 text-dark">Aplikasi buku uang kas</h6>
 
           <form action="page-profile.html">
             <div class="form-group">
-              <label>Firstname &amp; Lastname</label>
-              <input type="text" class="form-control" placeholder="Enter your firstname and lastname">
+              <label>Nama Lengkap</label>
+              <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Masukkan nama lengkap" value="{{ old('name') }}">
+
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+
             </div><!-- form-group -->
             <div class="form-group">
-              <label>Email</label>
-              <input type="text" class="form-control" placeholder="Enter your email">
-            </div><!-- form-group -->
+              <label>Username</label>
+              <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Masukkan email" value="{{ old('email') }}">
+            
+                @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            
+            </div> <!-- form-group -->
             <div class="form-group">
               <label>Password</label>
-              <input type="password" class="form-control" placeholder="Enter your password">
+              <input type="password" class="form-control" placeholder="Masukkan password" name="password" id="password" required autocomplete="password">
+
+                @error('password')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+
             </div><!-- form-group -->
-            <button class="btn btn-az-primary btn-block">Create Account</button>
-            <div class="row row-xs">
-              <div class="col-sm-6"><button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signup with Facebook</button></div>
-              <div class="col-sm-6 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-block"><i class="fab fa-twitter"></i> Signup with Twitter</button></div>
-            </div><!-- row -->
+            <div class="form-group">
+              <label>Konfirmasi Password</label>
+              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" id="password-confirm" placeholder="Konfirmasi password" required autocomplete="new-password">
+
+            </div><!-- form-group -->
+
+            <button class="btn btn-az-primary btn-block">Buat Akun</button>
           </form>
         </div><!-- az-signup-header -->
         <div class="az-signup-footer">
-          <p>Already have an account? <a href="page-signin.html">Sign In</a></p>
+          <p>Sudah memiliki akun? <a href="page-signin.html">Masuk</a></p>
         </div><!-- az-signin-footer -->
       </div><!-- az-column-signup -->
     </div><!-- az-signup-wrapper -->
