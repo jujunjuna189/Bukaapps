@@ -14,4 +14,27 @@ class PemasukanController extends Controller
         $data['pemasukan'] = Pemasukan::where('user_id', $user_id)->get();
         return view('transaksi.pemasukan.index', $data);
     }
+
+    public function add()
+    {
+        return view('transaksi.pemasukan.add');
+    }
+
+    public function add_proses()
+    {
+    }
+
+    public function update(Request $request)
+    {
+
+        return view('transaksi.pemasukan.update');
+    }
+
+    public function update_proses()
+    {
+    }
+
+    public function delete()
+    {
+    }
 }

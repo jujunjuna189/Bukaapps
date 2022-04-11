@@ -28,8 +28,15 @@
                     </li>
                 </ul>
             </div>
-            <div class="mt-4">
-                <span class="text-muted"><i class="typcn typcn-calendar-outline"></i> Tanggal Last Update</span>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mt-4">
+                        <span class="text-muted"><i class="typcn typcn-calendar-outline"></i> Tanggal Last Update</span>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <a href="{{ route('transaksi.pemasukan.add') }}" class="btn btn-primary"><i class="typcn typcn-plus"></i> Tambah Pemasukan</a>
+                </div>
             </div>
 
             <div class="mt-4">

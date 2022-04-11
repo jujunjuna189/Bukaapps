@@ -41,6 +41,11 @@ Route::post('/users/update/proses', [UserController::class, 'update_proses'])->n
 Route::get('/users/delete', [UserController::class, 'delete'])->name('users.delete');
 // transaksi pemasukan
 Route::get('/transaksi/pemasukan', [PemasukanController::class, 'index'])->name('transaksi.pemasukan');
+Route::get('/transaksi/pemasukan/add', [PemasukanController::class, 'add'])->name('transaksi.pemasukan.add');
+Route::post('/transaksi/pemasukan/add/proses', [PemasukanController::class, 'add_proses'])->name('transaksi.pemasukan.add.proses');
+Route::get('/transaksi/pemasukan/update', [PemasukanController::class, 'update'])->name('transaksi.pemasukan.update');
+Route::post('/transaksi/pemasukan/update/proses', [PemasukanController::class, 'update_proses'])->name('transaksi.pemasukan.update.proses');
+Route::get('/transaksi/pemasukan/delete', [PemasukanController::class, 'delete'])->name('transaksi.pemasukan.delete');
 // transaksi pengeluaran
 Route::get('/transaksi/pengeluaran', [PengeluaranController::class, 'index'])->name('transaksi.pengeluaran');
 Route::get('/transaksi/pengeluaran/add', [PengeluaranController::class, 'add'])->name('transaksi.pengeluaran.add');

@@ -16,8 +16,8 @@ class CreatePengeluaran extends Migration
         Schema::create('pengeluaran', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id');
-            $table->string('title');
-            $table->integer('total');
+            $table->integer('purchase');
+            $table->string('description');
             $table->timestamps();
         });
     }
