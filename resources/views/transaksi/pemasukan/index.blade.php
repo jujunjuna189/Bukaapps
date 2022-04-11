@@ -41,12 +41,12 @@
 
             <div class="mt-4">
                 @foreach($pemasukan as $val)
-                <div class="card mb-2">
+                <div class="card mb-2 rounded">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h5>{{ App\Models\GlobalModel::format_date($val->created_at) }}</h5>
-                                <p class="mb-0"><small>{{ $val->description }}</small></p>
+                                <h5 class="m-0">{{ App\Models\GlobalModel::format_date($val->created_at) }}</h5>
+                                <p class="mb-0 text-muted"><small>{{ $val->description }}</small></p>
                             </div>
                             <div class="col-lg-6 text-right">
                                 <h6 class="text-primary">{{ App\Models\GlobalModel::format_currency($val->sell_price) }}</h6>
