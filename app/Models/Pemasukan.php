@@ -10,5 +10,5 @@ class Pemasukan extends Model
     use HasFactory;
 
     protected $table = 'pemasukan';
-    protected $fillable = ['title', 'total'];
+    protected $fillable = ['user_id', 'sell_price', 'description'];
 }

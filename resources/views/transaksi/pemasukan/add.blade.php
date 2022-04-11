@@ -10,13 +10,20 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="#" method="post">
+            <form action="{{ route('transaksi.pemasukan.add.proses') }}" method="post">
                 @csrf
                 <div class="form-group">
-                    <label>Nama Lengkap</label>
-                    <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Masukkan Nama Lengkap Anda" name="name" id="name" value="{{ old('name') }}">
+                    <label>Nominal Pemasukan</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                Rp
+                            </div>
+                        </div>
+                        <input type="number" class="form-control @error('sell_price') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="sell_price" id="sell_price" value="{{ old('sell_price') }}">
+                    </div>
 
-                    @error('name')
+                    @error('sell_price')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -24,10 +31,20 @@
                 </div><!-- form-group -->
 
                 <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Masukkan Username Anda" name="email" id="email" value="{{ old('email') }}">
+                    <label class="mb-0">Pengeluaran</label>
+                    <div>
+                        <small>Masukan pengeluaran jika ada</small>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                Rp
+                            </div>
+                        </div>
+                        <input type="number" class="form-control @error('purchase') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="purchase" id="purchase" value="{{ old('purchase') }}">
+                    </div>
 
-                    @error('email')
+                    @error('number')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -35,10 +52,10 @@
                 </div><!-- form-group -->
 
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Masukkan Username Anda" name="password" id="password" required value="{{ old('password') }}">
+                    <label>Keterangan</label>
+                    <textarea name="description" id="description" cols="30" rows="3" class="form-control" placeholder="..."></textarea>
 
-                    @error('password')
+                    @error('description')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

@@ -17,7 +17,6 @@ class CreatePemasukan extends Migration
             $table->id();
             $table->bigInteger('user_id');
             $table->integer('sell_price');
-            $table->integer('purchase');
             $table->string('description');
             $table->timestamps();
         });
