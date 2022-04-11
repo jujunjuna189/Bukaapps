@@ -49,7 +49,7 @@
                                 <p class="mb-0"><small>{{ $val->description }}</small></p>
                             </div>
                             <div class="col-lg-6 text-right">
-                                <h6 class="text-primary">{{ $val->sell_price }}</h6>
+                                <h6 class="text-primary">{{ App\Models\GlobalModel::format_currency($val->sell_price) }}</h6>
                             </div>
                         </div>
                     </div>
