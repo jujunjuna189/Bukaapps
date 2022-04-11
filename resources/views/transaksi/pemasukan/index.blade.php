@@ -21,17 +21,17 @@
             <div class="nav-scroller">
                 <ul class="nav nav-tabs tickets-tab-switch" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link rounded active" id="open-tab" data-bs-toggle="tab" href="#open-tickets" role="tab" aria-controls="open-tickets" aria-selected="true">Pemasukan <div class="badge">13</div></a>
+                        <a class="nav-link rounded active" id="open-tab" data-bs-toggle="tab" href="#open-tickets" role="tab" aria-controls="open-tickets" aria-selected="true">Pemasukan <div class="badge">{{ $pemasukan->count() }}</div></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded" id="pending-tab" data-bs-toggle="tab" href="#pending-tickets" role="tab" aria-controls="pending-tickets" aria-selected="false">Pengeluaran <div class="badge">50 </div></a>
+                        <a class="nav-link rounded" id="pending-tab" data-bs-toggle="tab" href="#pending-tickets" role="tab" aria-controls="pending-tickets" aria-selected="false">Pengeluaran <div class="badge">{{ $pengeluaran->count() }}</div></a>
                     </li>
                 </ul>
             </div>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="mt-4">
-                        <span class="text-muted"><i class="typcn typcn-calendar-outline"></i> Tanggal Last Update</span>
+                        <span class="text-muted"><i class="typcn typcn-calendar-outline"></i> {{ isset($pemasukan[0]) ? $pemasukan[0]->created_at : date('d M Y') }}</span>
                     </div>
                 </div>
                 <div class="col-lg-6 text-right">
@@ -41,7 +41,7 @@
 
             <div class="mt-4">
                 @foreach($pemasukan as $val)
-                <div class="card">
+                <div class="card mb-2">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">

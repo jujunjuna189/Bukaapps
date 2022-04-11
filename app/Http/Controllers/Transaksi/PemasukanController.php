@@ -12,7 +12,8 @@ class PemasukanController extends Controller
     public function index()
     {
         $user_id = $this->myCode();
-        $data['pemasukan'] = Pemasukan::where('user_id', $user_id)->get();
+        $data['pemasukan'] = Pemasukan::where('user_id', $user_id)->orderBy('id', 'desc')->get();
+        $data['pengeluaran'] = Pengeluaran::where('user_id', $user_id)->orderBy('id', 'desc')->get();
         return view('transaksi.pemasukan.index', $data);
     }
 
@@ -30,12 +31,14 @@ class PemasukanController extends Controller
         $obj['sell_price'] = $request->sell_price;
         $obj['description'] = $request->description;
 
+        // Add Pemasukan
+        $pemasukan = Pemasukan::create($obj);
+
         $obj_['user_id'] = $user_id;
+        $obj_['pemasukan_id'] =  $pemasukan->id;
         $obj_['purchase'] = $request->purchase;
         $obj_['description'] = $request->description;
 
-        // Add Pemasukan
-        Pemasukan::create($obj);
         // Add Pengeluaran
         if ($request->purchase != '') {
             Pengeluaran::create($obj_);
