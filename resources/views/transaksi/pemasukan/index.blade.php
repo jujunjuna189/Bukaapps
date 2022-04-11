@@ -45,7 +45,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h5>{{ $val->created_at }}</h5>
+                                <h5>{{ App\Models\GlobalModel::format_date($val->created_at) }}</h5>
                                 <p class="mb-0"><small>{{ $val->description }}</small></p>
                             </div>
                             <div class="col-lg-6 text-right">

@@ -17,7 +17,7 @@ class GlobalModel extends Model
 
     public static function format_date($date)
     {
-        $date = date('d M Y', strtotime($date));
+        $date = date('d-m-Y', strtotime($date));
 
         return $date;
     }
