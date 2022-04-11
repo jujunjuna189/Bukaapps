@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-right">
-                    <a href="{{route('transaksi.utang.add')}}" class="btn btn-primary"><i class="typcn typcn-plus"></i> Tambah</a>
+                    <a href="{{route('transaksi.utang.add')}}" class="btn btn-primary"><i class="typcn typcn-plus"></i> Catat Utang</a>
                 </div>
             </div>
         </div>
