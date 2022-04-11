@@ -1,0 +1,26 @@
+.bg-hover:hover{
+    background-color: rgb(243, 249, 255);
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* Padding */
+@media only screen and (min-width: 320px) and (max-width: 425px){
+    .mobile-p-0{
+        padding: 0;
+    }
+    .mobile-pt-3{
+        padding-top: 1.5rem;
+    }
+}
+
+/* margin */
+@media only screen and (min-width: 320px) and (max-width: 425px){
+    .mobile-m-0{
+        margin: 0;
+    }
+    .mobile-mt-3{
+        margin-top: 1.5rem;
+    }
+}

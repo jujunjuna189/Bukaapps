@@ -19,6 +19,8 @@
 
     <!-- azia CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/azia.css') }}">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="{{ asset('assets/customcss/style.css') }}">
     <!-- Datatable -->
     <link rel="stylesheet" href="{{ asset('assets/lib/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/lib/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
@@ -27,6 +29,16 @@
 </head>
 
 <body class="az-body">
+    @if(isset($auth))
+    <div class="az-header shadow-none">
+        <div class="container-fluid">
+            <div class="az-header-left">
+                <a href="{{ url()->previous() }}" class="text-dark h5"><i class="typcn typcn-arrow-left mr-3"></i> Kembali</a>
+                <a href="" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
+            </div><!-- az-header-left -->
+        </div><!-- container -->
+    </div><!-- az-header -->
+    @endif
 
     @if(!isset($auth))
     <div class="az-header shadow-none">
@@ -155,10 +167,10 @@
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaksi</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
-                            <a href="{{route('transaksi.pemasukan')}}" class="nav-sub-link">Pemasukan & Pengeluaran</a>
+                            <a href="{{route('transaksi')}}" class="nav-sub-link">Pemasukan & Pengeluaran</a>
                         </li>
                         <li class="nav-sub-item">
-                            <a href="{{route('transaksi.utang')}}" class="nav-sub-link">Utang & Piutang</a>
+                            <a href="#" class="nav-sub-link">Utang & Piutang</a>
                         </li>
                     </ul>
                 </li><!-- nav-item -->
@@ -249,6 +261,8 @@
 
     <div class="az-navbar-backdrop"></div>
     <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+
+    @yield('js')
 </body>
 
 </html>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Master\KategoriKasController;
 use App\Http\Controllers\Transaksi\PemasukanController;
 use App\Http\Controllers\Transaksi\PengeluaranController;
 use App\Http\Controllers\Transaksi\PiutangController;
+use App\Http\Controllers\Transaksi\TransaksiController;
 use App\Http\Controllers\Transaksi\UtangController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -41,31 +42,11 @@ Route::post('/users/add/proses', [UserController::class, 'add_proses'])->name('u
 Route::get('/users/update', [UserController::class, 'update'])->name('users.update');
 Route::post('/users/update/proses', [UserController::class, 'update_proses'])->name('users.update.proses');
 Route::get('/users/delete', [UserController::class, 'delete'])->name('users.delete');
-// transaksi pemasukan
-Route::get('/transaksi/pemasukan', [PemasukanController::class, 'index'])->name('transaksi.pemasukan');
-Route::get('/transaksi/pemasukan/add', [PemasukanController::class, 'add'])->name('transaksi.pemasukan.add');
-Route::post('/transaksi/pemasukan/add/proses', [PemasukanController::class, 'add_proses'])->name('transaksi.pemasukan.add.proses');
-Route::get('/transaksi/pemasukan/update', [PemasukanController::class, 'update'])->name('transaksi.pemasukan.update');
-Route::post('/transaksi/pemasukan/update/proses', [PemasukanController::class, 'update_proses'])->name('transaksi.pemasukan.update.proses');
-Route::get('/transaksi/pemasukan/delete', [PemasukanController::class, 'delete'])->name('transaksi.pemasukan.delete');
-// transaksi pengeluaran
-Route::get('/transaksi/pengeluaran', [PengeluaranController::class, 'index'])->name('transaksi.pengeluaran');
-Route::get('/transaksi/pengeluaran/add', [PengeluaranController::class, 'add'])->name('transaksi.pengeluaran.add');
-Route::post('/transaksi/pengeluaran/add/proses', [PengeluaranController::class, 'add_proses'])->name('transaksi.pengeluaran.add.proses');
-Route::get('/transaksi/pengeluaran/update', [PengeluaranController::class, 'update'])->name('transaksi.pengeluaran.update');
-Route::get('/transaksi/pengeluaran/update/proses', [PengeluaranController::class, 'update_proses'])->name('transaksi.pengeluaran.update.proses');
-Route::get('/transaksi/pengeluaran/delete', [PengeluaranController::class, 'delete'])->name('transaksi.pengeluaran.delete');
-// utang
-Route::get('/transaksi/utang', [UtangController::class, 'index'])->name('transaksi.utang');
-Route::get('/transaksi/utang/add', [UtangController::class, 'add'])->name('transaksi.utang.add');
-Route::post('/transaksi/utang/add/proses', [UtangController::class, 'add_proses'])->name('transaksi.utang.add.proses');
-Route::get('/transaksi/utang/update', [UtangController::class, 'update'])->name('transaksi.utang.update');
-Route::get('/transaksi/utang/update/proses', [UtangController::class, 'update_proses'])->name('transaksi.utang.update.proses');
-Route::get('/transaksi/utang/delete', [UtangController::class, 'delete'])->name('transaksi.utang.delete');
-// piutang
-Route::get('/transaksi/piutang', [PiutangController::class, 'index'])->name('transaksi.piutang');
-Route::get('/transaksi/piutang/add', [PiutangController::class, 'add'])->name('transaksi.piutang.add');
-Route::get('/transaksi/piutang/add/proses', [PiutangController::class, 'add_proses'])->name('transaksi.piutang.add.proses');
-Route::get('/transaksi/piutang/update', [PiutangController::class, 'update'])->name('transaksi.piutang.update');
-Route::get('/transaksi/piutang/update/proses', [PiutangController::class, 'update_proses'])->name('transaksi.piutang.update.proses');
-Route::get('/transaksi/piutang/delete', [PiutangController::class, 'delete'])->name('transaksi.piutang.delete');
+// transaksi
+Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+Route::get('/transaksi/detail', [TransaksiController::class, 'detail'])->name('transaksi.detail');
+Route::get('/transaksi/add', [TransaksiController::class, 'add'])->name('transaksi.add');
+Route::post('/transaksi/add/proses', [TransaksiController::class, 'add_proses'])->name('transaksi.add.proses');
+Route::get('/transaksi/update', [TransaksiController::class, 'update'])->name('transaksi.update');
+Route::post('/transaksi/update/proses', [TransaksiController::class, 'update_proses'])->name('transaksi.update.proses');
+Route::get('/transaksi/delete', [TransaksiController::class, 'delete'])->name('transaksi.delete');

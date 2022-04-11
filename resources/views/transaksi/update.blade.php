@@ -3,14 +3,14 @@
 <div class="media-body">
     <div class="az-content-header">
         <div>
-            <h6 class="az-content-title tx-18 mg-b-5">Tambah Pemasukan</h6>
+            <h6 class="az-content-title tx-18 mg-b-5">Ubah Pemasukan</h6>
             <p class="az-content-text tx-13 mg-b-0">Isi Form dengan Benar !</p>
         </div>
     </div><!-- az-content-header -->
 
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('transaksi.pemasukan.add.proses') }}" method="post">
+            <form action="{{ route('transaksi.update.proses', ['transaksi_id' => $transaksi->id]) }}" method="post">
                 @csrf
                 <div class="form-group">
                     <label>Nominal Pemasukan</label>
@@ -20,7 +20,7 @@
                                 Rp
                             </div>
                         </div>
-                        <input type="number" class="form-control @error('sell_price') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="sell_price" id="sell_price" value="{{ old('sell_price') }}">
+                        <input type="number" class="form-control @error('sell_price') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="sell_price" id="sell_price" value="{{ $transaksi->sell_price }}">
                     </div>
 
                     @error('sell_price')
@@ -41,10 +41,10 @@
                                 Rp
                             </div>
                         </div>
-                        <input type="number" class="form-control @error('purchase') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="purchase" id="purchase" value="{{ old('purchase') }}">
+                        <input type="number" class="form-control @error('purchase') is-invalid @enderror" placeholder="Masukkan nominal pemasukan" name="purchase" id="purchase" value="{{ $transaksi->purchase }}">
                     </div>
 
-                    @error('number')
+                    @error('purchase')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
@@ -53,7 +53,7 @@
 
                 <div class="form-group">
                     <label>Keterangan</label>
-                    <textarea name="description" id="description" cols="30" rows="3" class="form-control" placeholder="..."></textarea>
+                    <textarea name="description" id="description" cols="30" rows="3" class="form-control" placeholder="...">{{ $transaksi->description }}</textarea>
 
                     @error('description')
                     <span class="invalid-feedback" role="alert">
