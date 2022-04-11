@@ -7,5 +7,27 @@ use Illuminate\Http\Request;
 
 class PiutangController extends Controller
 {
-    //
+    public function index(){
+        return view('transaksi.piutang.index');
+    }
+
+    public function add(){
+        // content
+    }
+
+    public function add_proses(){
+        // content
+    }
+
+    public function update(){
+        // content
+    }
+
+    public function update_proses(){
+        // content
+    }
+
+    public function delete(){
+        // content
+    }
 }

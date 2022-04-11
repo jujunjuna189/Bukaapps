@@ -3,6 +3,7 @@
 use App\Http\Controllers\Master\KategoriKasController;
 use App\Http\Controllers\Transaksi\PemasukanController;
 use App\Http\Controllers\Transaksi\PengeluaranController;
+use App\Http\Controllers\Transaksi\PiutangController;
 use App\Http\Controllers\Transaksi\UtangController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -57,7 +58,14 @@ Route::get('/transaksi/pengeluaran/delete', [PengeluaranController::class, 'dele
 // utang
 Route::get('/transaksi/utang', [UtangController::class, 'index'])->name('transaksi.utang');
 Route::get('/transaksi/utang/add', [UtangController::class, 'add'])->name('transaksi.utang.add');
-Route::post('/transaksi/utang/add/proses', [UtangController::class, 'add_proses'])->name('transaksi.utang.add_proses');
+Route::post('/transaksi/utang/add/proses', [UtangController::class, 'add_proses'])->name('transaksi.utang.add.proses');
 Route::get('/transaksi/utang/update', [UtangController::class, 'update'])->name('transaksi.utang.update');
-Route::get('/transaksi/utang/update/proses', [UtangController::class, 'update_proses'])->name('transaksi.utang.update_proses');
+Route::get('/transaksi/utang/update/proses', [UtangController::class, 'update_proses'])->name('transaksi.utang.update.proses');
 Route::get('/transaksi/utang/delete', [UtangController::class, 'delete'])->name('transaksi.utang.delete');
+// piutang
+Route::get('/transaksi/piutang', [PiutangController::class, 'index'])->name('transaksi.piutang');
+Route::get('/transaksi/piutang/add', [PiutangController::class, 'add'])->name('transaksi.piutang.add');
+Route::get('/transaksi/piutang/add/proses', [PiutangController::class, 'add_proses'])->name('transaksi.piutang.add.proses');
+Route::get('/transaksi/piutang/update', [PiutangController::class, 'update'])->name('transaksi.piutang.update');
+Route::get('/transaksi/piutang/update/proses', [PiutangController::class, 'update_proses'])->name('transaksi.piutang.update.proses');
+Route::get('/transaksi/piutang/delete', [PiutangController::class, 'delete'])->name('transaksi.piutang.delete');
