@@ -10,8 +10,8 @@ class PemasukanController extends Controller
 {
     public function index()
     {
-
-        $data['pemasukan'] = Pemasukan::all();
+        $user_id = $this->myCode();
+        $data['pemasukan'] = Pemasukan::where('user_id', $user_id)->get();
         return view('transaksi.pemasukan.index', $data);
     }
 }

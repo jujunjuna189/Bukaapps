@@ -139,7 +139,7 @@
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-folder"></i>Master</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
-                            <a href="{{ route('kategori_kas') }}" class="nav-sub-link">Jenis Kas</a>
+                            <a href="{{ route('kategori_kas') }}" class="nav-sub-link">Kategori Kas</a>
                         </li>
                     </ul>
                 </li><!-- nav-item -->
@@ -147,8 +147,8 @@
                 <li class="nav-item">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-group"></i>Pengguna</a>
                     <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="{{ route('users', ['role' => 1]) }}" class="nav-sub-link">Admin</a></li>
-                        <li class="nav-sub-item"><a href="{{ route('users', ['role' => 2]) }}" class="nav-sub-link">User</a></li>
+                        <li class="nav-sub-item"><a href="{{ route('users', ['role_kode' => 1]) }}" class="nav-sub-link">Admin</a></li>
+                        <li class="nav-sub-item"><a href="{{ route('users', ['role_kode' => 2]) }}" class="nav-sub-link">User</a></li>
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
