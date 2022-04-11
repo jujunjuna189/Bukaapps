@@ -12,7 +12,7 @@ class PiutangController extends Controller
     }
 
     public function add(){
-        // content
+        return view('transaksi.piutang.add');
     }
 
     public function add_proses(){

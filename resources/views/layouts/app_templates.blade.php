@@ -158,7 +158,7 @@
                             <a href="{{route('transaksi.pemasukan')}}" class="nav-sub-link">Pemasukan & Pengeluaran</a>
                         </li>
                         <li class="nav-sub-item">
-                            <a href="app-mail.html" class="nav-sub-link">Utang & Piutang</a>
+                            <a href="{{route('transaksi.utang')}}" class="nav-sub-link">Utang & Piutang</a>
                         </li>
                     </ul>
                 </li><!-- nav-item -->

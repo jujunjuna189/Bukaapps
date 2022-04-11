@@ -16,7 +16,7 @@ class UtangController extends Controller
     }
 
     public function add_proses(){
-        // content
+        
     }
 
     public function update(){
