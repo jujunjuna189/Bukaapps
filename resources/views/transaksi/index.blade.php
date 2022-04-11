@@ -58,7 +58,7 @@
                         <td class="text-right text-primary font-weight-bold">{{ App\Models\GlobalModel::format_currency($total_pengeluaran) }}</td>
                     </tr>
                     @foreach($transaksi as $val)
-                    <tr>
+                    <tr onclick="onClick('<?= $val->id ?>')" class="bg-hover cursor-pointer">
                         <td>
                             {{ $val->title }}
                             <div>     

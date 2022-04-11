@@ -170,7 +170,7 @@
                             <a href="{{route('transaksi')}}" class="nav-sub-link">Pemasukan & Pengeluaran</a>
                         </li>
                         <li class="nav-sub-item">
-                            <a href="#" class="nav-sub-link">Utang & Piutang</a>
+                            <a href="{{route('utang_piutang')}}" class="nav-sub-link">Utang & Piutang</a>
                         </li>
                     </ul>
                 </li><!-- nav-item -->
@@ -202,7 +202,7 @@
     </div><!-- az-navbar -->
 
     @endif
-    <div class="az-content az-content-dashboard-four">
+    <div class="az-content az-content-dashboard-four mobile-">
         <div class="media media-dashboard">
             @yield('content')
         </div>
