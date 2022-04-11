@@ -27,6 +27,7 @@ class UserController extends Controller
         $obj['name'] = $request->name;
         $obj['email'] = $request->email;
         $obj['password'] = Hash::make($request->password);
+        $obj['role_kode'] = 'User';
 
         User::create($obj);
 
