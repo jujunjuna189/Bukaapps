@@ -14,7 +14,15 @@
                 @csrf
                 <div class="form-group">
                     <label>Nominal</label>
-                    <input type="number" class="form-control @error('purchase') is-invalid @enderror" placeholder="Masukan Nominal" name="purchase" id="purchase" value="{{ old('purchase') }}">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                Rp
+                            </div>
+                        </div>
+                        <input type="number" class="form-control @error('purchase') is-invalid @enderror" placeholder="Masukan Nominal" name="purchase" id="purchase" value="{{ old('purchase') }}">
+                    </div>
+                        
                     
                     @error('purchase')
                     <span class="invalid-feedback" role="alert">

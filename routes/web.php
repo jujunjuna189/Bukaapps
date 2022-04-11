@@ -3,6 +3,7 @@
 use App\Http\Controllers\Master\KategoriKasController;
 use App\Http\Controllers\Transaksi\PemasukanController;
 use App\Http\Controllers\Transaksi\PengeluaranController;
+use App\Http\Controllers\Transaksi\UtangController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -53,3 +54,10 @@ Route::post('/transaksi/pengeluaran/add/proses', [PengeluaranController::class, 
 Route::get('/transaksi/pengeluaran/update', [PengeluaranController::class, 'update'])->name('transaksi.pengeluaran.update');
 Route::get('/transaksi/pengeluaran/update/proses', [PengeluaranController::class, 'update_proses'])->name('transaksi.pengeluaran.update.proses');
 Route::get('/transaksi/pengeluaran/delete', [PengeluaranController::class, 'delete'])->name('transaksi.pengeluaran.delete');
+// utang
+Route::get('/transaksi/utang', [UtangController::class, 'index'])->name('transaksi.utang');
+Route::get('/transaksi/utang/add', [UtangController::class, 'add'])->name('transaksi.utang.add');
+Route::post('/transaksi/utang/add/proses', [UtangController::class, 'add_proses'])->name('transaksi.utang.add_proses');
+Route::get('/transaksi/utang/update', [UtangController::class, 'update'])->name('transaksi.utang.update');
+Route::get('/transaksi/utang/update/proses', [UtangController::class, 'update_proses'])->name('transaksi.utang.update_proses');
+Route::get('/transaksi/utang/delete', [UtangController::class, 'delete'])->name('transaksi.utang.delete');
