@@ -14,19 +14,32 @@ class TransaksiController extends Controller
     {
         $user_id = $this->myCode();
 
-        $transaksi = Transaksi::where('user_id', $user_id)->get();
+        $transaksi = Transaksi::where('user_id', $user_id)->orderBy('id', 'desc')->get();
 
+        $jumlah_pemasukan = 0;
+        $jumlah_pengeluaran = 0;
         $total_pemasukan = 0;
         $total_pengeluaran = 0;
 
-        foreach($transaksi as $val){
+        foreach ($transaksi as $val) {
             $total_pemasukan += $val->sell_price;
             $total_pengeluaran += $val->purchase;
+
+            if ($val->sell_price != 0) {
+                $jumlah_pemasukan += 1;
+            }
+
+            if ($val->purchase != 0) {
+                $jumlah_pengeluaran += 1;
+            }
         }
 
         $data['transaksi'] = $transaksi;
+        $data['jumlah_pemasukan'] = $jumlah_pemasukan;
+        $data['jumlah_pengeluaran'] = $jumlah_pengeluaran;
         $data['total_pemasukan'] = $total_pemasukan;
         $data['total_pengeluaran'] = $total_pengeluaran;
+
         return view('transaksi.index', $data);
     }
 
@@ -36,13 +49,17 @@ class TransaksiController extends Controller
         $transaksi = Transaksi::find($transaksi_id);
         $data['transaksi'] = $transaksi;
         $data['site'] = explode('//', url(''));
+        $data['back'] = route('transaksi');
 
         return view('transaksi.detail', $data);
     }
 
-    public function add()
+    public function add(Request $request)
     {
-        return view('transaksi.add');
+        $page = $request->transaksi;
+
+        $data['page'] = $page;
+        return view('transaksi.add', $data);
     }
 
     public function add_proses(Request $request)
@@ -51,7 +68,7 @@ class TransaksiController extends Controller
         $user_id = $this->myCode();
 
         $obj['user_id'] = $user_id;
-        $obj['title'] = 'Pemasukan';
+        $obj['title'] = $request->sell_price > 0 ? 'Pemasukan' : 'Pengeluaran';
         $obj['sell_price'] = $request->sell_price;
         $obj['purchase'] = $request->purchase;
         $obj['description'] = $request->description;

@@ -1,17 +1,26 @@
 @extends('layouts.app_templates')
 @section('content')
 <div class="media-body">
-    <div class="az-content-header">
-        <div>
-            <h6 class="az-content-title tx-18 mg-b-5">Tambah Pemasukan</h6>
-            <p class="az-content-text tx-13 mg-b-0">Isi Form dengan Benar !</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <h6 class="mb-0">Tambah Pemasukan</h6>
+            <p class="mb-3">Isi Form dengan Benar !</p>
         </div>
-    </div><!-- az-content-header -->
+        <div class="col-lg-6">
+            <div class="text-right mb-3">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="{{route('transaksi.add', ['transaksi' => 'pemasukan'])}}" class="btn @if($page == 'pemasukan') btn-secondary active @else btn-outline-secondary @endif pd-x-25">Pemasukan</a>
+                    <a href="{{route('transaksi.add', ['transaksi' => 'pengeluaran'])}}" class="btn  @if($page == 'pengeluaran') btn-secondary active @else btn-outline-secondary @endif pd-x-25">Pengeluaran</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('transaksi.add.proses') }}" method="post">
+            <form action="{{ route('transaksi.add.proses',) }}" method="post">
                 @csrf
+                @if($page == 'pemasukan')
                 <div class="form-group">
                     <label>Nominal Pemasukan</label>
                     <div class="input-group">
@@ -29,12 +38,15 @@
                     </span>
                     @enderror
                 </div><!-- form-group -->
+                @endif
 
                 <div class="form-group">
                     <label class="mb-0">Pengeluaran</label>
+                    @if($page == 'pemasukan')
                     <div>
                         <small>Masukan pengeluaran jika ada</small>
                     </div>
+                    @endif
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">

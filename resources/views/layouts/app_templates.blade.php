@@ -33,7 +33,7 @@
     <div class="az-header shadow-none">
         <div class="container-fluid">
             <div class="az-header-left">
-                <a href="{{ url()->previous() }}" class="text-dark h5"><i class="typcn typcn-arrow-left mr-3"></i> Kembali</a>
+                <a href="{{ $back }}" class="text-dark h5"><i class="typcn typcn-arrow-left mr-3"></i> Kembali</a>
                 <a href="" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
             </div><!-- az-header-left -->
         </div><!-- container -->
@@ -248,9 +248,9 @@
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
             $('#example2').DataTable({
                 "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": false,
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
