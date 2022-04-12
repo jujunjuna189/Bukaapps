@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Master\KategoriKasController;
+use App\Http\Controllers\Stokbarang\StokBarangController;
 use App\Http\Controllers\Transaksi\PemasukanController;
 use App\Http\Controllers\Transaksi\PengeluaranController;
 use App\Http\Controllers\Transaksi\PiutangController;
@@ -63,4 +64,10 @@ Route::get('/utang_piutang/delete', [UtangPiutangController::class, 'delete'])->
 Route::get('/utang_piutang/payment', [UtangPiutangController::class, 'payment'])->name('utang_piutang.payment');
 Route::post('/utang_piutang/payment/proses', [UtangPiutangController::class, 'payment_proses'])->name('utang_piutang.payment.proses');
 // Stok Barang
-Route::get('/stok_barang', [UtangPiutangController::class, 'index'])->name('stok_barang');
+Route::get('/stok_barang', [StokBarangController::class, 'index'])->name('stok_barang');
+Route::get('/stok_barang/add', [StokBarangController::class, 'add'])->name('stok_barang.add');
+Route::post('/stok_barang/add/proses', [StokBarangController::class, 'add_proses'])->name('stok_barang.add.proses');
+Route::get('/stok_barang/detail', [StokBarangController::class, 'detail'])->name('stok_barang.detail');
+Route::get('/stok_barang/update', [StokBarangController::class, 'update'])->name('stok_barang.update');
+Route::post('/stok_barang/update/proses', [StokBarangController::class, 'update_proses'])->name('stok_barang.update.proses');
+Route::get('/stok_barang/delete', [StokBarangController::class, 'delete'])->name('stok_barang.delete');

@@ -9,11 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    private $page_nav = 3;
+
     public function index(Request $request)
     {
         $role_kode = $request->role_kode != null ? [$request->role_kode] : [1, 2];
         $user = User::whereIn('role_kode', $role_kode)->get();
         $data['user'] = $user;
+        $data['page_nav'] = $this->page_nav;
         return view('user.index', $data);
     }
 

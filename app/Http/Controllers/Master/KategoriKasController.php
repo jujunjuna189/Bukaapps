@@ -9,12 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class KategoriKasController extends Controller
 {
+    private $page_nav = 2;
     //
     public function kategori_kas()
     {
         $kategori_kas = KategoriKas::all();
         $data['kategori_kas'] = $kategori_kas;
         $data['no'] = 1;
+        $data['page_nav'] = $this->page_nav;
         return view('master.kategori_kas.kategori_kas', $data);
     }
 

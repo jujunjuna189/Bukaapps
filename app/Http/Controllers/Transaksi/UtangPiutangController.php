@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class UtangPiutangController extends Controller
 {
+    private $page_nav = 4;
     public function index()
     {
         $user_id = $this->myCode();
@@ -31,6 +32,7 @@ class UtangPiutangController extends Controller
         $data['utang_piutang'] = $utang_piutang;
         $data['utang'] = $utang;
         $data['piutang'] = $piutang;
+        $data['page_nav'] = $this->page_nav;
         return view('utang_piutang.index', $data);
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $page_nav = 1;
     /**
      * Create a new controller instance.
      *
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data['page_nav'] = $this->page_nav;
+        return view('home', $data);
     }
 }

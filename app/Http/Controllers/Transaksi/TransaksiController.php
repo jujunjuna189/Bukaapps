@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
 {
+    private $page_nav = 4;
+
     public function index()
     {
         $user_id = $this->myCode();
@@ -39,6 +41,7 @@ class TransaksiController extends Controller
         $data['jumlah_pengeluaran'] = $jumlah_pengeluaran;
         $data['total_pemasukan'] = $total_pemasukan;
         $data['total_pengeluaran'] = $total_pengeluaran;
+        $data['page_nav'] = $this->page_nav;
 
         return view('transaksi.index', $data);
     }

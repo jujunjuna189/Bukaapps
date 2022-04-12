@@ -15,7 +15,8 @@ class CreateStokBarang extends Migration
     {
         Schema::create('stok_barang', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('product_code');
+            $table->bigInteger('user_id');
+            $table->string('product_code');
             $table->string('product_name');
             $table->integer('selling_price');
             $table->integer('purchase_price');

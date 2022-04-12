@@ -3,8 +3,8 @@
 <div class="media-body">
     <div class="az-content-header row">
         <div class="col-lg-6">
-            <h6 class="az-content-title tx-18 mg-b-5">Utang dan Piutang</h6>
-            <p class="az-content-text tx-13 mg-b-0 mb-lg-0 mb-3">Hi, welcome back! Here's your summary of your events.</p>
+            <h6 class="az-content-title tx-18 mg-b-5">Utang & Piutang</h6>
+            <p class="az-content-text tx-13 mg-b-0 mb-lg-0 mb-3">Data list utang dan piutang</p>
         </div>
         <div class="col-lg-6">
             <div class="text-right">

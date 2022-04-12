@@ -131,22 +131,10 @@
             </div><!-- az-navbar-search -->
             <ul class="nav">
                 <li class="nav-label">Main Menu</li>
-                <li class="nav-item active">
-                    <a href="index.html" class="nav-link with-sub"><i class="typcn typcn-clipboard"></i>Dashboard</a>
-                    <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="dashboard-one.html" class="nav-sub-link">Web Analytics</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-two.html" class="nav-sub-link">Sales Monitoring</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-three.html" class="nav-sub-link">Ad Campaign</a></li>
-                        <li class="nav-sub-item active"><a href="dashboard-four.html" class="nav-sub-link">Event Management</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-five.html" class="nav-sub-link">Helpdesk Management</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-six.html" class="nav-sub-link">Finance Monitoring</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-seven.html" class="nav-sub-link">Cryptocurrency</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-eight.html" class="nav-sub-link">Executive / SaaS</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-nine.html" class="nav-sub-link">Campaign Monitoring</a></li>
-                        <li class="nav-sub-item"><a href="dashboard-ten.html" class="nav-sub-link">Product Management</a></li>
-                    </ul>
+                <li class="nav-item @if(isset($page_nav) && $page_nav == 1) active @endif">
+                    <a href="{{ route('home') }}" class="nav-link"><i class="typcn typcn-clipboard"></i>Dashboard</a>
                 </li><!-- nav-item -->
-                <li class="nav-item">
+                <li class="nav-item @if(isset($page_nav) && $page_nav == 2) active @endif">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-folder"></i>Master</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
@@ -155,14 +143,14 @@
                     </ul>
                 </li><!-- nav-item -->
 
-                <li class="nav-item">
+                <li class="nav-item @if(isset($page_nav) && $page_nav == 3) active @endif">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-group"></i>Pengguna</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item"><a href="{{ route('users', ['role_kode' => 1]) }}" class="nav-sub-link">Admin</a></li>
                         <li class="nav-sub-item"><a href="{{ route('users', ['role_kode' => 2]) }}" class="nav-sub-link">User</a></li>
                     </ul>
                 </li><!-- nav-item -->
-                <li class="nav-item">
+                <li class="nav-item @if(isset($page_nav) && $page_nav == 4) active @endif">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i>Transaksi</a>
                     <ul class="nav-sub">
                         <li class="nav-sub-item">
@@ -173,8 +161,8 @@
                         </li>
                     </ul>
                 </li><!-- nav-item -->
-                <li class="nav-item">
-                    <a href="" class="nav-link"><i class="typcn typcn-folder"></i>Stok Barang</a>
+                <li class="nav-item @if(isset($page_nav) && $page_nav == 5) active @endif">
+                    <a href="{{ route('stok_barang') }}" class="nav-link"><i class="typcn typcn-folder"></i>Stok Barang</a>
                 </li><!-- nav-item -->
                 <li class="nav-item">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Laporan</a>
@@ -210,6 +198,7 @@
 
     <script src="{{ asset('assets/js/azia.js') }}"></script>
     <script src="{{ asset('assets/js/chart.flot.sampledata.js') }}"></script>
+    <script src="{{ asset('assets/lib/chart.js/Chart.bundle.min.js') }}"></script>
     <!-- Datatables -->
     <script src="{{ asset('assets/lib/datatables/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/lib/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
