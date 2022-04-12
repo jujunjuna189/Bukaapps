@@ -62,3 +62,5 @@ Route::get('/utang_piutang/update/paid_off', [UtangPiutangController::class, 'pa
 Route::get('/utang_piutang/delete', [UtangPiutangController::class, 'delete'])->name('utang_piutang.delete');
 Route::get('/utang_piutang/payment', [UtangPiutangController::class, 'payment'])->name('utang_piutang.payment');
 Route::post('/utang_piutang/payment/proses', [UtangPiutangController::class, 'payment_proses'])->name('utang_piutang.payment.proses');
+// Stok Barang
+Route::get('/stok_barang', [UtangPiutangController::class, 'index'])->name('stok_barang');

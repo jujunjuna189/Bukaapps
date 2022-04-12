@@ -107,13 +107,30 @@ class UtangPiutangController extends Controller
 
     public function payment(Request $request)
     {
-        return view('utang_piutang.payment');
+        $utang_piutang_id = $request->utang_piutang_id;
+
+        $data['utang_piutang'] = UtangPiutang::find($utang_piutang_id);
+
+        return view('utang_piutang.payment', $data);
     }
 
-    public function payment_proses()
+    public function payment_proses(Request $request)
     {
-        echo json_encode('Ok');
-        die;
+        $utang_piutang_id = $request->utang_piutang_id;
+        $utang_piutang = UtangPiutang::find($utang_piutang_id);
+
+        $nominal = $utang_piutang->nominal - $request->nominal;
+
+        $obj['nominal'] = $nominal;
+        $utang_piutang->update($obj);
+
+        $obj_['paid_off_id'] = $utang_piutang->id;
+        $obj_['nominal'] = $request->nominal;
+        $obj_['description'] = $request->description;
+
+        PaymentHistory::create($obj_);
+
+        return redirect()->route('utang_piutang.detail', ['utang_piutang_id' => $utang_piutang_id])->with('success', 'Ditandai Lunas');
     }
 
     public function delete(Request $request)

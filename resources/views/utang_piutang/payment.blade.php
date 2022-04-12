@@ -10,7 +10,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form action="{{ route('utang_piutang.payment.proses') }}" method="post">
+            <form action="{{ route('utang_piutang.payment.proses', ['utang_piutang_id' => $utang_piutang->id]) }}" method="post">
                 @csrf
                 <div class="form-group">
                     <label>Nominal</label>

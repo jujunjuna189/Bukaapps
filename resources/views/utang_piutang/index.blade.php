@@ -30,7 +30,7 @@
 
     <div class="mt-4">
         <div class="table-responsive">
-            <table class="table w-100">
+            <table class="table w-100" id="example2">
                 <thead>
                     <tr>
                         <td>Transaksi</td>

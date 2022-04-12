@@ -174,20 +174,7 @@
                     </ul>
                 </li><!-- nav-item -->
                 <li class="nav-item">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Stok Barang</a>
-                    <ul class="nav-sub">
-                        <li class="nav-sub-item"><a href="util-background.html" class="nav-sub-link">Background</a></li>
-                        <li class="nav-sub-item"><a href="util-border.html" class="nav-sub-link">Border</a></li>
-                        <li class="nav-sub-item"><a href="util-display.html" class="nav-sub-link">Display</a></li>
-                        <li class="nav-sub-item"><a href="util-flex.html" class="nav-sub-link">Flex</a></li>
-                        <li class="nav-sub-item"><a href="util-height.html" class="nav-sub-link">Height</a></li>
-                        <li class="nav-sub-item"><a href="util-margin.html" class="nav-sub-link">Margin</a></li>
-                        <li class="nav-sub-item"><a href="util-padding.html" class="nav-sub-link">Padding</a></li>
-                        <li class="nav-sub-item"><a href="util-position.html" class="nav-sub-link">Position</a></li>
-                        <li class="nav-sub-item"><a href="util-typography.html" class="nav-sub-link">Typography</a></li>
-                        <li class="nav-sub-item"><a href="util-width.html" class="nav-sub-link">Width</a></li>
-                        <li class="nav-sub-item"><a href="util-extras.html" class="nav-sub-link">Extras</a></li>
-                    </ul>
+                    <a href="" class="nav-link"><i class="typcn typcn-folder"></i>Stok Barang</a>
                 </li><!-- nav-item -->
                 <li class="nav-item">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-edit"></i>Laporan</a>
