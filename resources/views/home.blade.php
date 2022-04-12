@@ -3,8 +3,9 @@
 <div class="media-body">
     <div class="row row-sm">
         <div class="col-sm-12 col-md-12 col-xl-12 mg-t-20 mg-md-t-0">
-            <div class="az-content-label az-content-label-sm mg-b-15">With Transparency</div>
-            <div class="ht-200 ht-lg-250"><canvas id="chartBar2"></canvas></div>
+            <h1>Grafik</h1>
+            <div class="az-content-label az-content-label-sm mg-b-15">Statistik Perhari</div>
+            <div class="ht-200 ht-lg-300"><canvas id="chartBar2"></canvas></div>
         </div><!-- col-6 -->
     </div><!-- row -->
 </div>
@@ -22,18 +23,24 @@
             data: {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 39, 20, 10, 25, 18],
-                    backgroundColor: 'rgba(0,123,255,.5)'
-                }]
+                        label: 'Pemasukan',
+                        data: [12, 39, 20, 10, 25, 18],
+                        backgroundColor: 'rgba(0,123,255,.5)'
+                    },
+                    {
+                        label: 'Pengeluaran',
+                        data: [12, 39, 20, 10, 25, 18],
+                        backgroundColor: 'rgb(223, 71, 89, .5)',
+                    },
+                ]
             },
             options: {
                 maintainAspectRatio: false,
                 responsive: true,
                 legend: {
-                    display: false,
+                    display: true,
                     labels: {
-                        display: false
+                        display: true
                     }
                 },
                 scales: {
