@@ -74,6 +74,7 @@
                     @enderror
                 </div><!-- form-group -->
                 <div class="form-froup text-right">
+                    <a href="{{url()->previous()}}" class="btn btn-outline-danger">Cancel</a>
                     <button type="submit" class="btn btn-primary"><i class="typcn typcn-folder-add"></i> Simpan</button>
                 </div>
 
