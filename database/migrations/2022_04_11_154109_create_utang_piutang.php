@@ -20,6 +20,7 @@ class CreateUtangPiutang extends Migration
             $table->integer('nominal')->nullable();
             $table->string('type');
             $table->string('description')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

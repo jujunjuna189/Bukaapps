@@ -10,5 +10,5 @@ class UtangPiutang extends Model
     use HasFactory;
 
     protected $table = 'utang_piutang';
-    protected $fillable = ['user_id', 'nominal', 'description'];
+    protected $fillable = ['user_id', 'person', 'nominal', 'type', 'description', 'status'];
 }

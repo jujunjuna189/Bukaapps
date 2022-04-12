@@ -58,4 +58,7 @@ Route::get('/utang_piutang/add', [UtangPiutangController::class, 'add'])->name('
 Route::post('/utang_piutang/add/proses', [UtangPiutangController::class, 'add_proses'])->name('utang_piutang.add.proses');
 Route::get('/utang_piutang/update', [UtangPiutangController::class, 'update'])->name('utang_piutang.update');
 Route::post('/utang_piutang/update/proses', [UtangPiutangController::class, 'update_proses'])->name('utang_piutang.update.proses');
+Route::get('/utang_piutang/update/paid_off', [UtangPiutangController::class, 'paid_off'])->name('utang_piutang.update.paid_off');
 Route::get('/utang_piutang/delete', [UtangPiutangController::class, 'delete'])->name('utang_piutang.delete');
+Route::get('/utang_piutang/payment', [UtangPiutangController::class, 'payment'])->name('utang_piutang.payment');
+Route::post('/utang_piutang/payment/proses', [UtangPiutangController::class, 'payment_proses'])->name('utang_piutang.payment.proses');

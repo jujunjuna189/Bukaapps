@@ -41,7 +41,7 @@
                 @endif
 
                 <div class="form-group">
-                    <label class="mb-0">Pengeluaran</label>
+                    <label class="mb-2">Pengeluaran</label>
                     @if($page == 'pemasukan')
                     <div>
                         <small>Masukan pengeluaran jika ada</small>
@@ -74,7 +74,7 @@
                     @enderror
                 </div><!-- form-group -->
                 <div class="form-froup text-right">
-                    <a href="{{url()->previous()}}" class="btn btn-outline-danger">Cancel</a>
+                    <a href="{{ route('transaksi') }}" class="btn btn-outline-secondary">Cancel</a>
                     <button type="submit" class="btn btn-primary"><i class="typcn typcn-folder-add"></i> Simpan</button>
                 </div>
 

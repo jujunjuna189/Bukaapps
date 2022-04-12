@@ -7,11 +7,8 @@
             <p class="az-content-text tx-13 mg-b-0 mb-lg-0 mb-3">Hi, welcome back! Here's your summary of your events.</p>
         </div>
         <div class="col-lg-6">
-            <div class="float-right">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="#" class="btn btn-secondary pd-x-25 active">Utang</a>
-                    <a href="#" class="btn btn-outline-secondary pd-x-25">Piutang</a>
-                </div>
+            <div class="text-right">
+                <a href="{{ route('utang_piutang.add', ['page' => 'utang']) }}" class="btn btn-primary rounded"><i class="typcn typcn-plus"></i> Catat Utang & Piutang</a>
             </div>
         </div>
     </div><!-- az-content-header -->
@@ -21,28 +18,18 @@
             <div class="nav-scroller">
                 <ul class="nav nav-tabs tickets-tab-switch" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link rounded active" id="open-tab" data-bs-toggle="tab" href="#open-tickets" role="tab" aria-controls="open-tickets" aria-selected="true">Utang <div class="badge">{{ $utang_piutang->count() }}</div></a>
+                        <a class="nav-link rounded" id="open-tab" data-bs-toggle="tab" href="#open-tickets" role="tab" aria-controls="open-tickets" aria-selected="true">Utang <div class="badge">{{ App\Models\GlobalModel::format_currency($utang) }}</div></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link rounded" id="pending-tab" data-bs-toggle="tab" href="#pending-tickets" role="tab" aria-controls="pending-tickets" aria-selected="false">Piutang <div class="badge">#</div></a>
+                        <a class="nav-link rounded" id="pending-tab" data-bs-toggle="tab" href="#pending-tickets" role="tab" aria-controls="pending-tickets" aria-selected="false">Piutang <div class="badge">{{ App\Models\GlobalModel::format_currency($piutang) }}</div></a>
                     </li>
                 </ul>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="mt-4">
-                        <span class="text-muted"><i class="typcn typcn-calendar-outline"></i> {{ isset($utang_piutang[0]) ? $utang_piutang[0]->created_at : date('d M Y') }}</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-right">
-                    <a href="{{ route('utang_piutang.add') }}" class="btn btn-primary"><i class="typcn typcn-plus"></i> Catat Utang</a>
-                </div>
             </div>
         </div>
     </div>
 
     <div class="mt-4">
-    <div class="table-responsive">
+        <div class="table-responsive">
             <table class="table w-100">
                 <thead>
                     <tr>
@@ -54,9 +41,9 @@
                 <tbody>
                     @foreach($utang_piutang as $val)
                     <tr onclick="onClick('<?= $val->id ?>')" class="bg-hover cursor-pointer">
-                        <td class="font-weight-bold">{{ $val->type }}</td>
-                        <td class="font-weight-bold">{{ $val->person }}</td>
-                        <td class="text-right text-primary font-weight-bold">{{$val->nominal}}</td>
+                        <td>{{ $val->type }}</td>
+                        <td>{{ $val->person }}</td>
+                        <td class="text-right @if($val->type == 'piutang') text-primary @else text-danger @endif font-weight-bold">{{ App\Models\GlobalModel::format_currency($val->nominal) }}</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -67,7 +54,7 @@
 @endsection
 @section('js')
 <script>
-    function onClick (utang_piutang_id) {
+    function onClick(utang_piutang_id) {
         window.open('<?= route('utang_piutang.detail') ?>?utang_piutang_id=' + utang_piutang_id, '_self');
     }
 </script>

@@ -1,4 +1,4 @@
-@extends('layouts.app_templates', ['auth' => false])
+@extends('layouts.app_templates', ['auth' => false, 'back_nav' => true])
 @section('content')
 <div class="media-body">
     <div class="card">
@@ -60,7 +60,7 @@
             <a href="{{ route('transaksi.update', ['transaksi_id' => $transaksi->id]) }}" class="text-dark"><i class="typcn typcn-pen"></i> Ubah data</a>
         </div>
         <div class="col-lg-6">
-        <a href="{{ route('transaksi.delete', ['transaksi_id' => $transaksi->id]) }}" class="btn btn-outline-danger rounded mobile-mt-3"><i class="typcn typcn-trash"></i> Hapus data</a>
+            <a href="{{ route('transaksi.delete', ['transaksi_id' => $transaksi->id]) }}" class="btn btn-outline-danger rounded mobile-mt-3"><i class="typcn typcn-trash"></i> Hapus data</a>
         </div>
     </div>
 </div><!-- media-body -->

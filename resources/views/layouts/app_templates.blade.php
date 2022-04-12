@@ -29,12 +29,11 @@
 </head>
 
 <body class="az-body">
-    @if(isset($auth))
+    @if(isset($back_nav))
     <div class="az-header shadow-none">
         <div class="container-fluid">
             <div class="az-header-left">
                 <a href="{{ $back }}" class="text-dark h5"><i class="typcn typcn-arrow-left mr-3"></i> Kembali</a>
-                <a href="" id="azNavShow" class="az-header-menu-icon d-lg-none"><span></span></a>
             </div><!-- az-header-left -->
         </div><!-- container -->
     </div><!-- az-header -->
