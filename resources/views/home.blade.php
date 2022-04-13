@@ -13,6 +13,11 @@
 @section('js')
 
 <script>
+    let day = <?= json_encode($day) ?>;
+    let pemasukan = <?= json_encode($pemasukan) ?>;
+    let pengeluaran = <?= json_encode($pengeluaran) ?>;
+    let max = <?= $max ?>;
+
     $(function() {
         'use strict';
 
@@ -21,15 +26,15 @@
         new Chart(ctx2, {
             type: 'bar',
             data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                labels: day,
                 datasets: [{
                         label: 'Pemasukan',
-                        data: [12, 39, 20, 10, 25, 18],
+                        data: pemasukan,
                         backgroundColor: 'rgba(0,123,255,.5)'
                     },
                     {
                         label: 'Pengeluaran',
-                        data: [12, 39, 20, 10, 25, 18],
+                        data: pengeluaran,
                         backgroundColor: 'rgb(223, 71, 89, .5)',
                     },
                 ]
@@ -48,7 +53,7 @@
                         ticks: {
                             beginAtZero: true,
                             fontSize: 10,
-                            max: 80
+                            max: max
                         }
                     }],
                     xAxes: [{

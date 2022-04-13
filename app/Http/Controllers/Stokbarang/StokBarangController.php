@@ -15,7 +15,7 @@ class StokBarangController extends Controller
     {
         $user_id = $this->myCode();
 
-        $stok_barang = StokBarang::where('user_id', $user_id)->orderBy('id', 'desc')->orderBy('id', 'desc')->get();
+        $stok_barang = StokBarang::where('user_id', $user_id)->orderBy('id', 'desc')->get();
 
         $data['stok_barang'] = $stok_barang;
         $data['page_nav'] = $this->page_nav;

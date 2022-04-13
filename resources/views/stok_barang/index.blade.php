@@ -39,7 +39,7 @@
                     @foreach($stok_barang as $val)
                     <tr onclick="onClick('<?= $val->id ?>')" class="bg-hover cursor-pointer">
                         <td>{{ $val->product_name }}</td>
-                        <td class="text-right"><span class="font-weight-bold">{{ $val->quantity }}</span> Barang</td>
+                        <td class="text-right"><span class="font-weight-bold @if($val->quantity <= 10) text-danger @else text-primary @endif">{{ $val->quantity }}</span> Barang</td>
                         <td class="text-right font-weight-bold">{{ App\Models\GlobalModel::format_currency($val->selling_price) }}</td>
                     </tr>
                     @endforeach
